@@ -16,6 +16,6 @@ app.use('/',urlRoute)
 app.get('/health/test',(req,res) => {
     res.send("Server Running!")
 })
-app.listen(5000,() => {
+app.listen(process.env.PORT||5000,() => {
     console.log("Server running")
 })
