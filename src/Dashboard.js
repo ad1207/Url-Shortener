@@ -7,7 +7,7 @@ export default function Dashboard(){
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
-            let res = await axios.post('http://localhost:5000/',{longUrl:url.current.value})
+            let res = await axios.post('https://url-shortener--nodejs.herokuapp.com/',{longUrl:url.current.value})
             console.log(res.data)
             setUrl(res.data.shortUrl)
         }
