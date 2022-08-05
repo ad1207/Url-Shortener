@@ -9,7 +9,7 @@ export default function Signup(){
     const password = useRef()
     const handleSubmit = async (e) => {
         e.preventDefault()
-        let res = await axios.post("http://localhost:5000/user/register",{username:username.current.value,email:email.current.value, password:password.current.value})
+        let res = await axios.post("https://url-shortener--nodejs.herokuapp.com/user/register",{username:username.current.value,email:email.current.value, password:password.current.value})
         document.cookie = "token="+res.data.token
         navigate('/user/dashboard')
     }
